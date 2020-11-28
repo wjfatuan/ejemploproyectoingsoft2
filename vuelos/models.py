@@ -9,6 +9,7 @@ class Ciudad(models.Model):
     nombre = models.CharField(max_length=64)
     pais = models.CharField(max_length=64, choices=COUNTRIES)
     codigo = models.IntegerField()
+    bandera = models.FileField(upload_to='banderas/', null=True, blank=True)
 
     def __str__(self) -> str:
         return str(self.codigo) + " - " + self.nombre

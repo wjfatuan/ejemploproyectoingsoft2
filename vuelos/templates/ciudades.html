@@ -1,0 +1,7 @@
+<h1>Ciudades</h1>
+<p>Acá encontrará la informaicón de las ciudades y sus aeropuertos</p>
+<ul>
+    {% for  ciudad in lista_ciudades %}
+        <li><a href="aeropuertos?ciudad={{ciudad.codigo}}">{{ ciudad }}</a></li>
+    {% endfor %}
+</ul>
